@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/900px-Facebook_Logo_2023.png" id="logo">
+        </div>
+        <input type="email" id="email" onclick="emailfun()"  placeholder="Email"><br><br><br>
+        <input type="password" id="password" onclick="passfun()" placeholder="Password"><br>
+        <button id="login" onclick="loginfun()">Login</button>
+    </div>
+
+    <style>
+        .cont{
+            box-shadow: 0px 0px 10px 12px rgba(0 0 0 0.2);
+            padding-right: 10px;
+            padding-bottom: 80px;
+            margin-left: 190px;
+            margin-right: 200px;
+            margin-top: 100px;
+            background-color: whitesmoke;
+            border-radius: 5%;
+        }
+
+        #email{
+            padding-right: 20px;
+            padding:10px;
+            border-radius: 5px;
+            border-color: white;
+            font-family:Arial, Helvetica, sans-serif ;
+            margin-left: 40%;
+        }
+
+        #password{
+            padding-right: 20px;
+            padding:10px;
+            border-radius: 5px;
+            border-color: white;
+            font-family:Arial, Helvetica, sans-serif ;
+            margin-left: 40%;
+        }
+
+
+        #logo{
+            clip-path: circle();
+            width: 60px;
+            margin-bottom: 30px;
+            margin-left: 50%;
+        }
+
+        #login{
+            padding-right: 40px;
+            padding-top: 8px;
+            border-radius: 5px;
+            border-color: white;
+            font-family:Arial, Helvetica, sans-serif ;
+            margin-left: 50%;
+            margin-top: 20px;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        function emailfun(){
+            var ema = document.getElementById('logo');
+            ema.src = "https://i0.wp.com/pediaa.com/wp-content/uploads/2018/06/Difference-Between-Email-and-Gmail_Figure-1.png?w=600&ssl=1"
+        }
+
+        function passfun(){
+            var ema = document.getElementById('logo');
+            ema.src = "https://cdn.icon-icons.com/icons2/1286/PNG/512/61_85304.png"
+        }
+
+        function loginfun(){
+            var ema = document.getElementById('logo');
+            ema.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/900px-Facebook_Logo_2023.png";
+
+            let emailval = document.getElementById('email').value;
+            let passval = document.getElementById('password').value;
+
+            if(emailval === 'abc@gmail.com' && passval === 'abc@123'){
+                alert('Login successful');
+            }else{
+                alert('Wrong email or password');
+            }
+        }
+    </script>
+</body>
+</html>
